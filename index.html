@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>JadeX SVG Converter</title>
+  <link rel='stylesheet' href='./bootstrap.min.css'>
+  <link rel="stylesheet" href="./svg_viewer.css">
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="container py-5">
+	<div class="row">JadeX SVG Viewer and Converter: &nbsp;&nbsp;
+	<input type="file" id="fileInput" accept=".svg" onchange="handleFileSelect(event)"></div>
+	<textarea id="userSVG" class="w-100" placeholder="PASTE YOUR SVG CODE HERE..." style="display: none;">
+	</textarea>
+	<div class="row">
+		<div class="col-3">
+			<button id="convertSVG" class="btn btn-info btn-block mt-3" title="Converts to a SVG file at this current size">Convert to SVG</button>
+		</div>
+		<div class="col-3">
+			<button id="convertPNG" class="btn btn-info btn-block mt-3" title="Converts to a PNG file at this current size">Convert to PNG</button>
+		</div>
+				<div class="col-3">
+			<button id="convertJPG" class="btn btn-info btn-block mt-3" title="Converts to a JPG image at this current size">Convert to JPG</button>
+		</div>
+		<div class="col-3">
+			<button id="convertPDF" class="btn btn-info btn-block mt-3" title="Converts to a PDF file at this current size">Convert to PDF</button>
+		</div>
+	</div>
+    <hr>
+	<div id="svgDraw"></div>
+    <hr>
+
+	<div class="imageHere" style="display: none;"></div>
+</div>
+<!-- partial -->
+  <script  src="./svg_viewer.js"></script>
+  <script src="./pdfkit.standalone.js"></script>
+  <script src="./blob-stream.js"></script>
+  <script src="./svg-to-pdfkit.js"></script>
+        <script src="./canvg.min.js"></script>
+</body>
+</html>
